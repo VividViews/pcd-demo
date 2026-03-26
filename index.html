@@ -1,0 +1,2420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Precision Cardiovascular Diagnostics | Mobile Ultrasound – Sugar Land, TX</title>
+  <meta name="description" content="Precision Cardiovascular Diagnostics (PCD) delivers professional mobile ultrasound services 24/7 across 14 Texas counties. Cardiac, vascular, general ultrasound, Holter Monitor and more — brought directly to your facility." />
+  <meta name="keywords" content="mobile ultrasound Texas, echocardiogram Sugar Land, cardiac ultrasound Fort Bend, vascular ultrasound, carotid ultrasound, holter monitor, ABI testing, mobile diagnostics Texas" />
+  <meta property="og:title" content="Precision Cardiovascular Diagnostics | Mobile Ultrasound Texas" />
+  <meta property="og:description" content="24/7 mobile ultrasound services across 14 Texas counties. Reports within 60 minutes. Board-certified sonographers." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
+    :root {
+      --navy:        #0a1628;
+      --navy-mid:    #0d1f3c;
+      --navy-light:  #142850;
+      --teal:        #00d4ff;
+      --teal-dim:    #00b8e0;
+      --teal-glow:   rgba(0,212,255,0.18);
+      --teal-glass:  rgba(0,212,255,0.08);
+      --white:       #ffffff;
+      --off-white:   #f4f8fd;
+      --gray-100:    #e8eef6;
+      --gray-300:    #9baec4;
+      --gray-500:    #5a7296;
+      --text-dark:   #0a1628;
+      --text-body:   #2d4163;
+      --radius-sm:   8px;
+      --radius-md:   16px;
+      --radius-lg:   24px;
+      --radius-xl:   40px;
+      --shadow-card: 0 4px 32px rgba(10,22,40,0.18);
+      --shadow-glow: 0 0 40px rgba(0,212,255,0.25);
+      --transition:  0.35s cubic-bezier(0.4,0,0.2,1);
+      --font-body:   'Inter', sans-serif;
+      --font-display:'DM Serif Display', serif;
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--text-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul { list-style: none; }
+
+    section { position: relative; }
+
+    /* ============================================================
+       UTILITY
+    ============================================================ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--teal);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--gray-500);
+      max-width: 540px;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #00e8ff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,212,255,0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.35);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.7);
+      transform: translateY(-2px);
+    }
+
+    /* Reveal animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-36px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(36px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* delay helpers */
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+    .delay-6 { transition-delay: 0.6s; }
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+      padding: 0 24px;
+    }
+
+    #navbar.scrolled {
+      background: rgba(10,22,40,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 2px 40px rgba(0,0,0,0.35);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .nav-logo-name {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+
+    .nav-logo-tag {
+      font-size: 0.67rem;
+      color: var(--teal);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.78);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .nav-portal-btn {
+      background: var(--teal) !important;
+      color: var(--navy) !important;
+      font-weight: 700 !important;
+      padding: 8px 18px !important;
+      border-radius: 50px !important;
+      font-size: 0.82rem !important;
+    }
+
+    .nav-portal-btn:hover {
+      background: #00e8ff !important;
+      box-shadow: 0 4px 20px rgba(0,212,255,0.4);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: rgba(10,22,40,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 20px 24px 32px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 4px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      transition: background 0.2s ease;
+    }
+
+    .mobile-menu a:hover { background: rgba(255,255,255,0.08); }
+
+    .mobile-menu .mobile-portal {
+      margin-top: 12px;
+      background: var(--teal);
+      color: var(--navy) !important;
+      font-weight: 700 !important;
+      border-radius: 50px !important;
+      text-align: center;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #home {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #060e1d 0%, #0a1628 45%, #0d2147 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      padding-top: 72px;
+    }
+
+    .hero-bg-orbs {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .hero-bg-orbs::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(0,212,255,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: orbPulse 6s ease-in-out infinite alternate;
+    }
+
+    .hero-bg-orbs::after {
+      content: '';
+      position: absolute;
+      bottom: -10%;
+      left: -5%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0,120,200,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: orbPulse 8s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes orbPulse {
+      from { transform: scale(1); opacity: 0.7; }
+      to   { transform: scale(1.12); opacity: 1; }
+    }
+
+    /* ECG line */
+    .ecg-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 140px;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .ecg-svg {
+      width: 200%;
+      height: 100%;
+      animation: ecgScroll 4s linear infinite;
+    }
+
+    @keyframes ecgScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px 160px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,212,255,0.12);
+      border: 1px solid rgba(0,212,255,0.3);
+      color: var(--teal);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 50px;
+      margin-bottom: 28px;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+      animation: blink 1.5s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 24px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--teal);
+    }
+
+    .hero-body {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.68);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .hero-stat-number span {
+      color: var(--teal);
+    }
+
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Animated card on right side */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(0,212,255,0.2);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      width: 100%;
+      max-width: 400px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,212,255,0.1);
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-card-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--teal), #0099cc);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    .hero-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .hero-card-sub {
+      font-size: 0.75rem;
+      color: var(--teal);
+      font-weight: 500;
+    }
+
+    .hero-card-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .hero-card-row:last-child { border-bottom: none; }
+
+    .hero-card-row-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .hero-card-row-value {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .hero-card-row-value.teal { color: var(--teal); }
+
+    .status-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: #22c55e;
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: blink 2s ease-in-out infinite;
+    }
+
+    .hero-card-pulse {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .pulse-label {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .pulse-track {
+      position: relative;
+      height: 56px;
+      overflow: hidden;
+    }
+
+    .pulse-svg {
+      width: 200%;
+      height: 100%;
+      animation: ecgScroll 2.5s linear infinite;
+    }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    #services {
+      padding: 100px 0;
+      background: var(--off-white);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .services-header .section-label { justify-content: center; }
+    .services-header .section-subtitle { margin: 0 auto; text-align: center; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--teal-glass), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.14), 0 0 0 1.5px rgba(0,212,255,0.3);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #e8f4ff 0%, #d0ecff 100%);
+    }
+
+    .service-icon.cardiac   { background: linear-gradient(135deg, #fff0f0, #ffe0e0); }
+    .service-icon.vascular  { background: linear-gradient(135deg, #f0fff4, #d8f5e3); }
+    .service-icon.carotid   { background: linear-gradient(135deg, #fff8e1, #ffecb0); }
+    .service-icon.general   { background: linear-gradient(135deg, #e8f4ff, #d0e8ff); }
+    .service-icon.abi       { background: linear-gradient(135deg, #f3e8ff, #e5d0ff); }
+    .service-icon.holter    { background: linear-gradient(135deg, #e8fffb, #d0f5ef); }
+
+    .service-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .service-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #0077a8;
+      background: rgba(0,212,255,0.1);
+      padding: 4px 10px;
+      border-radius: 50px;
+      border: 1px solid rgba(0,212,255,0.2);
+    }
+
+    /* ============================================================
+       WHY PCD
+    ============================================================ */
+    #why-us {
+      padding: 100px 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #why-us::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0,212,255,0.07) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .why-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .why-left .section-title { color: var(--white); }
+
+    .why-left .section-subtitle { color: rgba(255,255,255,0.55); }
+
+    .why-phone {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 24px;
+      background: rgba(0,212,255,0.1);
+      border: 1px solid rgba(0,212,255,0.25);
+      border-radius: var(--radius-md);
+      width: fit-content;
+    }
+
+    .why-phone-icon { font-size: 1.4rem; }
+
+    .why-phone-text { 
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    .why-phone-label {
+      font-size: 0.72rem;
+      color: var(--teal);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .why-item {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: var(--transition);
+    }
+
+    .why-item:hover {
+      background: rgba(0,212,255,0.06);
+      border-color: rgba(0,212,255,0.2);
+      transform: translateY(-3px);
+    }
+
+    .why-item-icon {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .why-item-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .why-item-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       HOW IT WORKS
+    ============================================================ */
+    #how-it-works {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .how-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .how-header .section-label { justify-content: center; }
+
+    .steps-row {
+      display: grid;
+      grid-template-columns: 1fr 80px 1fr 80px 1fr;
+      align-items: start;
+      gap: 0;
+    }
+
+    .step {
+      text-align: center;
+      padding: 0 16px;
+    }
+
+    .step-circle {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), #1a3a6e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(10,22,40,0.2);
+    }
+
+    .step-circle::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      border: 2px solid rgba(0,212,255,0.3);
+    }
+
+    .step-num {
+      font-size: 1.8rem;
+    }
+
+    .step-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 44px;
+    }
+
+    .step-arrow {
+      color: var(--teal);
+      font-size: 1.6rem;
+      opacity: 0.5;
+    }
+
+    .step-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .step-desc {
+      font-size: 0.87rem;
+      color: var(--gray-500);
+      line-height: 1.65;
+    }
+
+    .step-badge {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--teal);
+      background: rgba(0,212,255,0.08);
+      border: 1px solid rgba(0,212,255,0.2);
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+
+    /* ============================================================
+       SERVICE AREAS
+    ============================================================ */
+    #service-areas {
+      padding: 100px 0;
+      background: var(--off-white);
+    }
+
+    .areas-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .areas-visual {
+      background: var(--navy);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .areas-visual::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0,212,255,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .areas-visual-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .areas-visual-headline {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .areas-visual-headline span { color: var(--teal); }
+
+    .texas-outline {
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      font-size: 9rem;
+      opacity: 0.06;
+      color: var(--white);
+      line-height: 1;
+      user-select: none;
+    }
+
+    .areas-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      position: relative;
+    }
+
+    .area-badge {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 50px;
+    }
+
+    .area-badge.highlight {
+      background: rgba(0,212,255,0.15);
+      border-color: rgba(0,212,255,0.35);
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .areas-right .section-subtitle { margin-bottom: 28px; }
+
+    .county-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .county-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--text-body);
+      font-weight: 500;
+    }
+
+    .county-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--teal);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .areas-note {
+      background: linear-gradient(135deg, #e8f4ff, #d0ecff);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px;
+      font-size: 0.88rem;
+      color: var(--text-body);
+      font-weight: 500;
+    }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    #about {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-card-main {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2147 100%);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .about-card-main::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0,212,255,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .about-card-main-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-card-main-title {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .about-card-main-body {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      position: relative;
+    }
+
+    .about-float-card {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 220px;
+    }
+
+    .about-float-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--teal), #0099cc);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .about-float-text strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .about-float-text span {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+    }
+
+    .about-content .section-subtitle { margin-bottom: 28px; }
+
+    .certifications {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 20px;
+      background: var(--off-white);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--gray-100);
+    }
+
+    .cert-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 1px; }
+
+    .cert-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .cert-desc {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    #faq {
+      padding: 100px 0;
+      background: var(--off-white);
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .faq-header .section-label { justify-content: center; }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--gray-100);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .faq-item.open {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      border-color: rgba(0,212,255,0.3);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 28px;
+      cursor: pointer;
+      gap: 16px;
+    }
+
+    .faq-question-text {
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--navy);
+      flex: 1;
+    }
+
+    .faq-chevron {
+      width: 28px;
+      height: 28px;
+      background: var(--off-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--gray-500);
+      transition: transform 0.3s ease, background 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+      background: var(--teal);
+      color: var(--navy);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq-item.open .faq-answer { max-height: 300px; }
+
+    .faq-answer-inner {
+      padding: 0 28px 24px;
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      line-height: 1.75;
+      border-top: 1px solid var(--gray-100);
+      padding-top: 16px;
+    }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    #contact {
+      padding: 100px 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contact::before {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0,212,255,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-left .section-title { color: var(--white); }
+    .contact-left .section-subtitle { color: rgba(255,255,255,0.5); margin-bottom: 36px; }
+
+    .contact-info-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-info-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+    }
+
+    .contact-info-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(0,212,255,0.12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-info-title {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .contact-info-value {
+      font-size: 0.95rem;
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* Form */
+    .contact-form-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .form-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .form-control {
+      width: 100%;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--white);
+      outline: none;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+
+    .form-control::placeholder { color: rgba(255,255,255,0.3); }
+
+    .form-control:focus {
+      border-color: rgba(0,212,255,0.5);
+      background: rgba(0,212,255,0.05);
+    }
+
+    .form-control option { background: var(--navy); color: var(--white); }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--teal);
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 16px;
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-family: var(--font-body);
+      transition: var(--transition);
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .form-submit:hover {
+      background: #00e8ff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,212,255,0.4);
+    }
+
+    .form-disclaimer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      margin-top: 12px;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer {
+      background: #060e1d;
+      padding: 60px 0 32px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand-name {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .footer-brand-tag {
+      font-size: 0.72rem;
+      color: var(--teal);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand-desc {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .footer-phone {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    .footer-col-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.3);
+      transition: color 0.2s ease;
+    }
+
+    .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual { display: none; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+      .why-layout { grid-template-columns: 1fr; gap: 48px; }
+      .areas-layout { grid-template-columns: 1fr; gap: 48px; }
+      .about-layout { grid-template-columns: 1fr; gap: 48px; }
+      .about-float-card { right: 16px; bottom: -16px; }
+      .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-content { padding: 60px 24px 120px; }
+      .hero-title { font-size: 2.2rem; }
+      .hero-stats { grid-template-columns: 1fr 1fr; gap: 20px; }
+
+      .steps-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .step-connector { display: none; }
+
+      .why-grid { grid-template-columns: 1fr; }
+
+      .county-list { grid-template-columns: 1fr; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas .btn { width: 100%; justify-content: center; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="nav-logo-name">Precision Cardiovascular Diagnostics</span>
+        <span class="nav-logo-tag">Mobile Ultrasound · Sugar Land, TX</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#service-areas">Service Areas</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="https://pcdportal.com" target="_blank" rel="noopener" class="nav-portal-btn">Employee Portal</a>
+      </div>
+
+      <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#home"          onclick="closeMenu()">Home</a>
+    <a href="#about"         onclick="closeMenu()">About</a>
+    <a href="#services"      onclick="closeMenu()">Services</a>
+    <a href="#why-us"        onclick="closeMenu()">Why Us</a>
+    <a href="#service-areas" onclick="closeMenu()">Service Areas</a>
+    <a href="#faq"           onclick="closeMenu()">FAQ</a>
+    <a href="#contact"       onclick="closeMenu()">Contact</a>
+    <a href="https://pcdportal.com" target="_blank" rel="noopener" class="mobile-portal">Employee Portal ↗</a>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="home">
+    <div class="hero-bg-orbs"></div>
+
+    <div class="hero-content">
+      <!-- Left Text -->
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Available 24 / 7 · 40–60 Min Response
+        </div>
+
+        <h1 class="hero-title">
+          Bringing <em>Precision Ultrasound</em> Directly to You
+        </h1>
+
+        <p class="hero-body">
+          PCD delivers professional mobile ultrasound services directly to hospitals, clinics, nursing homes, and physician offices across the Greater Houston area — around the clock, every day of the year.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">
+            📋 Request a Service
+          </a>
+          <a href="https://pcdportal.com" target="_blank" class="btn btn-outline">
+            🔐 Physician Portal ↗
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-number">24<span>/7</span></div>
+            <div class="hero-stat-label">Always Available</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">60<span>min</span></div>
+            <div class="hero-stat-label">Max Response Time</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">14<span>+</span></div>
+            <div class="hero-stat-label">Texas Counties</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Card -->
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-icon">🫀</div>
+            <div>
+              <div class="hero-card-title">Live Service Request</div>
+              <div class="hero-card-sub">Cardiac Ultrasound · Fort Bend County</div>
+            </div>
+          </div>
+
+          <div class="hero-card-row">
+            <span class="hero-card-row-label">Status</span>
+            <span class="hero-card-row-value"><span class="status-dot"></span>Sonographer Dispatched</span>
+          </div>
+          <div class="hero-card-row">
+            <span class="hero-card-row-label">ETA</span>
+            <span class="hero-card-row-value teal">~38 minutes</span>
+          </div>
+          <div class="hero-card-row">
+            <span class="hero-card-row-label">Study Type</span>
+            <span class="hero-card-row-value">Echo + Doppler</span>
+          </div>
+          <div class="hero-card-row">
+            <span class="hero-card-row-label">Report Delivery</span>
+            <span class="hero-card-row-value teal">STAT · within 60 min</span>
+          </div>
+          <div class="hero-card-row">
+            <span class="hero-card-row-label">Interpreter</span>
+            <span class="hero-card-row-value">Board-Certified Cardiologist</span>
+          </div>
+
+          <div class="hero-card-pulse">
+            <div class="pulse-label">Live ECG Signal</div>
+            <div class="pulse-track">
+              <svg class="pulse-svg" viewBox="0 0 800 60" preserveAspectRatio="none" fill="none">
+                <path d="M0,30 L60,30 L70,10 L80,50 L90,5 L100,55 L110,30 L170,30 L180,10 L190,50 L200,5 L210,55 L220,30 L280,30 L290,10 L300,50 L310,5 L320,55 L330,30 L390,30 L400,10 L410,50 L420,5 L430,55 L440,30 L500,30 L510,10 L520,50 L530,5 L540,55 L550,30 L610,30 L620,10 L630,50 L640,5 L650,55 L660,30 L720,30 L730,10 L740,50 L750,5 L760,55 L770,30 L800,30" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ECG line at bottom -->
+    <div class="ecg-container">
+      <svg class="ecg-svg" viewBox="0 0 1600 140" preserveAspectRatio="none" fill="none">
+        <path d="M0,100 L100,100 L120,60 L140,120 L155,20 L175,130 L195,100 L300,100 L320,60 L340,120 L355,20 L375,130 L395,100 L500,100 L520,60 L540,120 L555,20 L575,130 L595,100 L700,100 L720,60 L740,120 L755,20 L775,130 L795,100 L900,100 L920,60 L940,120 L955,20 L975,130 L995,100 L1100,100 L1120,60 L1140,120 L1155,20 L1175,130 L1195,100 L1300,100 L1320,60 L1340,120 L1355,20 L1375,130 L1395,100 L1500,100 L1520,60 L1540,120 L1555,20 L1575,130 L1595,100 L1600,100" stroke="rgba(0,212,255,0.15)" stroke-width="1.5" fill="none"/>
+        <path d="M0,100 L100,100 L120,60 L140,120 L155,20 L175,130 L195,100 L300,100 L320,60 L340,120 L355,20 L375,130 L395,100 L500,100" stroke="rgba(0,212,255,0.5)" stroke-width="2" fill="none" stroke-dasharray="600" stroke-dashoffset="0">
+          <animate attributeName="stroke-dashoffset" from="600" to="-600" dur="3s" repeatCount="indefinite"/>
+        </path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <div class="section-label">What We Offer</div>
+        <h2 class="section-title">Comprehensive Mobile Diagnostic Services</h2>
+        <p class="section-subtitle">Our board-certified sonographers bring state-of-the-art ultrasound technology directly to your facility, 24 hours a day, 7 days a week.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal delay-1">
+          <div class="service-icon cardiac">🫀</div>
+          <div class="service-name">Cardiac Ultrasound</div>
+          <div class="service-desc">Comprehensive echocardiography to assess heart structure and function, including wall motion, valve assessment, and hemodynamics.</div>
+          <div class="service-tags">
+            <span class="service-tag">M-Mode Echo</span>
+            <span class="service-tag">2D Echo</span>
+            <span class="service-tag">Doppler</span>
+            <span class="service-tag">Stress Echo</span>
+            <span class="service-tag">Echo Screenings</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal delay-2">
+          <div class="service-icon vascular">🩸</div>
+          <div class="service-name">Vascular Ultrasound</div>
+          <div class="service-desc">Detailed imaging of peripheral vessels to detect clots, plaque, and circulatory conditions affecting the venous and arterial systems.</div>
+          <div class="service-tags">
+            <span class="service-tag">IMT</span>
+            <span class="service-tag">Venous Doppler (DVT)</span>
+            <span class="service-tag">Arterial Doppler (PAD)</span>
+            <span class="service-tag">ABI</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal delay-3">
+          <div class="service-icon carotid">🧠</div>
+          <div class="service-name">Carotid Ultrasound</div>
+          <div class="service-desc">Non-invasive assessment of the carotid arteries to evaluate stroke risk, detect stenosis, and image plaque or abnormal blood flow patterns.</div>
+          <div class="service-tags">
+            <span class="service-tag">Stroke Risk Evaluation</span>
+            <span class="service-tag">Carotid Artery Imaging</span>
+            <span class="service-tag">Stenosis Detection</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal delay-4">
+          <div class="service-icon general">🔬</div>
+          <div class="service-name">General Ultrasound</div>
+          <div class="service-desc">Full abdominal, pelvic, thyroid, and soft-tissue imaging performed by certified sonographers for a wide range of diagnostic needs.</div>
+          <div class="service-tags">
+            <span class="service-tag">Thyroid</span>
+            <span class="service-tag">Abdominal Aorta</span>
+            <span class="service-tag">Renal Artery</span>
+            <span class="service-tag">Breast</span>
+            <span class="service-tag">Liver / Gallbladder</span>
+            <span class="service-tag">Pelvic</span>
+            <span class="service-tag">Testicular</span>
+            <span class="service-tag">Retroperitoneal</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal delay-5">
+          <div class="service-icon abi">🦵</div>
+          <div class="service-name">ABI — Ankle Brachial Index</div>
+          <div class="service-desc">A simple, non-invasive test that compares blood pressure at the ankle and arm to screen for peripheral artery disease (PAD) and assess circulation risk.</div>
+          <div class="service-tags">
+            <span class="service-tag">PAD Screening</span>
+            <span class="service-tag">Circulation Assessment</span>
+            <span class="service-tag">Non-Invasive</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal delay-6">
+          <div class="service-icon holter">📊</div>
+          <div class="service-name">Holter Monitor</div>
+          <div class="service-desc">Continuous 24-hour EKG recording to capture cardiac arrhythmias, palpitations, and electrical abnormalities during normal daily activity.</div>
+          <div class="service-tags">
+            <span class="service-tag">24-Hour EKG</span>
+            <span class="service-tag">Arrhythmia Detection</span>
+            <span class="service-tag">Continuous Recording</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHY PCD
+  ============================================================ -->
+  <section id="why-us">
+    <div class="container">
+      <div class="why-layout">
+
+        <div class="why-left reveal-left">
+          <div class="section-label">Why Choose PCD</div>
+          <h2 class="section-title" style="color:var(--white)">The Standard for Mobile Diagnostics in Texas</h2>
+          <p class="section-subtitle" style="color:rgba(255,255,255,0.55)">We combine clinical excellence with unmatched convenience — delivering board-interpreted ultrasound studies to your facility with speed and reliability you can depend on.</p>
+
+          <div class="why-phone">
+            <div class="why-phone-icon">📞</div>
+            <div>
+              <div class="why-phone-label">Call Us Anytime</div>
+              <div class="why-phone-text">713-715-7056</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-grid reveal-right">
+
+          <div class="why-item delay-1">
+            <div class="why-item-icon">🕐</div>
+            <div class="why-item-title">24/7 Availability</div>
+            <div class="why-item-desc">We never close. Order a study at 2 AM and your sonographer is on the way.</div>
+          </div>
+
+          <div class="why-item delay-2">
+            <div class="why-item-icon">⚡</div>
+            <div class="why-item-title">40–60 Min Response</div>
+            <div class="why-item-desc">Fast dispatch means faster care. We arrive at your facility quickly after the order is placed.</div>
+          </div>
+
+          <div class="why-item delay-3">
+            <div class="why-item-icon">💻</div>
+            <div class="why-item-title">Instant Online Reports</div>
+            <div class="why-item-desc">Reports transmitted to the physician portal within minutes. STAT results in under 60 minutes.</div>
+          </div>
+
+          <div class="why-item delay-4">
+            <div class="why-item-icon">🏅</div>
+            <div class="why-item-title">Board-Certified Readers</div>
+            <div class="why-item-desc">Every study is interpreted by a board-certified cardiologist or radiologist.</div>
+          </div>
+
+          <div class="why-item delay-5">
+            <div class="why-item-icon">📜</div>
+            <div class="why-item-title">Triple-Certified Sonographers</div>
+            <div class="why-item-desc">All sonographers hold certifications in Cardiac, Vascular, and General ultrasound.</div>
+          </div>
+
+          <div class="why-item delay-6">
+            <div class="why-item-icon">🏠</div>
+            <div class="why-item-title">Concierge Home Visits</div>
+            <div class="why-item-desc">We come to patients at home when clinically appropriate — true bedside care.</div>
+          </div>
+
+          <div class="why-item delay-1">
+            <div class="why-item-icon">💰</div>
+            <div class="why-item-title">Competitive Rates</div>
+            <div class="why-item-desc">We match or beat rates without compromising the quality of care or technology.</div>
+          </div>
+
+          <div class="why-item delay-2">
+            <div class="why-item-icon">🗺️</div>
+            <div class="why-item-title">Statewide Coverage</div>
+            <div class="why-item-desc">Based in Fort Bend County but able to serve any location across the state of Texas.</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW IT WORKS
+  ============================================================ -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="how-header reveal">
+        <div class="section-label">Simple Process</div>
+        <h2 class="section-title">From Order to Report in Three Steps</h2>
+      </div>
+
+      <div class="steps-row">
+
+        <div class="step reveal delay-1">
+          <div class="step-circle">
+            <span class="step-num">📋</span>
+          </div>
+          <div class="step-name">1. Place Your Order</div>
+          <div class="step-desc">Call us or submit a request through the physician portal. Our team confirms the study type, patient location, and clinical notes.</div>
+          <div class="step-badge">⚡ Immediate Confirmation</div>
+        </div>
+
+        <div class="step-connector reveal delay-2">
+          <div class="step-arrow">→</div>
+        </div>
+
+        <div class="step reveal delay-3">
+          <div class="step-circle">
+            <span class="step-num">🚗</span>
+          </div>
+          <div class="step-name">2. We Come to You</div>
+          <div class="step-desc">A certified sonographer arrives at your facility within 40–60 minutes, fully equipped to perform any cardiac, vascular, or general study.</div>
+          <div class="step-badge">🕐 40–60 Minute Arrival</div>
+        </div>
+
+        <div class="step-connector reveal delay-4">
+          <div class="step-arrow">→</div>
+        </div>
+
+        <div class="step reveal delay-5">
+          <div class="step-circle">
+            <span class="step-num">📊</span>
+          </div>
+          <div class="step-name">3. Report Delivered</div>
+          <div class="step-desc">Studies are read by a board-certified specialist and transmitted directly to your physician portal — STAT reports within 60 minutes.</div>
+          <div class="step-badge">✅ Within 24 Hrs (STAT: 60 Min)</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICE AREAS
+  ============================================================ -->
+  <section id="service-areas">
+    <div class="container">
+      <div class="areas-layout">
+
+        <div class="areas-visual reveal-left">
+          <div>
+            <div class="areas-visual-title">Primary Coverage</div>
+            <div class="areas-visual-headline">14 Counties<br><span>Around Fort Bend</span></div>
+          </div>
+
+          <div class="areas-badge-row">
+            <span class="area-badge highlight">Fort Bend ★</span>
+            <span class="area-badge">Harris</span>
+            <span class="area-badge">Brazoria</span>
+            <span class="area-badge">Galveston</span>
+            <span class="area-badge">Chambers</span>
+            <span class="area-badge">Liberty</span>
+            <span class="area-badge">San Jacinto</span>
+          </div>
+
+          <div class="texas-outline">🤠</div>
+        </div>
+
+        <div class="areas-right reveal-right">
+          <div class="section-label">Service Areas</div>
+          <h2 class="section-title">Serving Greater Houston &amp; Beyond</h2>
+          <p class="section-subtitle">Based in Sugar Land, Texas, PCD provides primary mobile ultrasound coverage to 14 surrounding counties and can arrange service anywhere in the state of Texas.</p>
+
+          <div class="county-list">
+            <div class="county-item">Fort Bend County</div>
+            <div class="county-item">Harris County</div>
+            <div class="county-item">Brazoria County</div>
+            <div class="county-item">Galveston County</div>
+            <div class="county-item">Chambers County</div>
+            <div class="county-item">Liberty County</div>
+            <div class="county-item">San Jacinto County</div>
+            <div class="county-item">Waller County</div>
+            <div class="county-item">Grimes County</div>
+            <div class="county-item">Brazos County</div>
+            <div class="county-item">Washington County</div>
+            <div class="county-item">Colorado County</div>
+            <div class="county-item">Matagorda County</div>
+            <div class="county-item">Victoria County</div>
+          </div>
+
+          <div class="areas-note">
+            🗺️ <strong>Anywhere in Texas:</strong> Don't see your county? PCD can arrange service statewide. Call <strong>713-715-7056</strong> to schedule.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-layout">
+
+        <div class="about-visual reveal-left">
+          <div class="about-card-main">
+            <div class="about-card-main-icon">🏥</div>
+            <div class="about-card-main-title">Professionally Owned.<br>Clinically Driven.</div>
+            <div class="about-card-main-body">Precision Cardiovascular Diagnostics was founded on a single mission: bring hospital-grade ultrasound diagnostics directly to the patients who need them — wherever they are, whenever they need it.</div>
+          </div>
+
+          <div class="about-float-card">
+            <div class="about-float-icon">✅</div>
+            <div class="about-float-text">
+              <strong>Board-Certified Readers</strong>
+              <span>Cardiology &amp; Radiology</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal-right">
+          <div class="section-label">About PCD</div>
+          <h2 class="section-title">Your Partner in Mobile Diagnostics</h2>
+          <p class="section-subtitle">We're not just a mobile ultrasound company — we're a clinical partner committed to speed, accuracy, and accessibility for every patient and provider we serve.</p>
+
+          <div class="certifications">
+            <div class="cert-item">
+              <div class="cert-icon">🎓</div>
+              <div>
+                <div class="cert-title">Registered, Board-Certified Sonographers</div>
+                <div class="cert-desc">Every sonographer on our team is certified across all three modalities: Cardiac, Vascular, and General Ultrasound.</div>
+              </div>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-icon">🔬</div>
+              <div>
+                <div class="cert-title">Multi-Modality Capability</div>
+                <div class="cert-desc">One team, one call. We cover Cardiac, Vascular, General Ultrasound, Holter Monitor, and EKG under a single professional practice.</div>
+              </div>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-icon">📡</div>
+              <div>
+                <div class="cert-title">Physician Portal Integration</div>
+                <div class="cert-desc">Reports are transmitted electronically to your portal within minutes of study completion — seamlessly integrated into your workflow.</div>
+              </div>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-icon">🌙</div>
+              <div>
+                <div class="cert-title">True 24/7 Commitment</div>
+                <div class="cert-desc">Nights, weekends, holidays — our team is on call and ready to respond. There is no "after hours" at PCD.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+  ============================================================ -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-header reveal">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle" style="margin:0 auto;text-align:center;">Everything you need to know about scheduling and working with PCD.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item reveal delay-1">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-question-text">How quickly can a sonographer arrive at my facility?</span>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">After an order is placed, our sonographers typically arrive within <strong>40 to 60 minutes</strong>. Our team is strategically positioned throughout the Fort Bend and Greater Houston area to ensure rapid response regardless of time of day.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-2">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-question-text">When will I receive the interpretation and report?</span>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Standard reports are available in the physician portal <strong>within 24 hours</strong> of study completion. For urgent or STAT cases, board-certified interpretations are delivered <strong>within 60 minutes</strong> of the study being performed.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-3">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-question-text">What types of facilities does PCD serve?</span>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">PCD provides mobile ultrasound services to a wide range of settings, including <strong>hospitals, outpatient clinics, physician offices, nursing homes, assisted living facilities, and private residences</strong>. If a patient needs a study, we find a way to get there.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-4">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-question-text">Are your sonographers certified?</span>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes. All PCD sonographers are <strong>registered and board-certified</strong> in all three ultrasound modalities — Cardiac (RDCS), Vascular (RVT), and General (RDMS). This ensures you receive expert-level imaging for every study type without needing to call multiple providers.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-5">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-question-text">Who interprets the ultrasound studies?</span>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">All studies are read by <strong>board-certified cardiologists or radiologists</strong>, depending on the study type. Final interpreted reports are transmitted directly to your physician portal — ready for immediate clinical use.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-6">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-question-text">Do you operate on weekends and holidays?</span>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Absolutely. PCD operates <strong>24 hours a day, 7 days a week, 365 days a year</strong> — including all weekends and holidays. Our on-call team is always ready to respond to urgent diagnostic needs.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-1">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-question-text">What if my facility is outside the 14-county coverage area?</span>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Our primary coverage covers 14 counties surrounding Fort Bend, but <strong>we service all of Texas</strong>. For locations outside our standard coverage zone, call us at <strong>713-715-7056</strong> and we'll arrange service for your facility.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-layout">
+
+        <div class="contact-left reveal-left">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title" style="color:var(--white)">Ready to Schedule a Study?</h2>
+          <p class="section-subtitle" style="color:rgba(255,255,255,0.5);margin-bottom:36px;">Our team is standing by 24/7. Fill out the request form or call us directly — we'll confirm your service in minutes.</p>
+
+          <div class="contact-info-blocks">
+            <div class="contact-info-block">
+              <div class="contact-info-icon">📞</div>
+              <div>
+                <div class="contact-info-title">Phone</div>
+                <div class="contact-info-value">713-715-7056</div>
+              </div>
+            </div>
+
+            <div class="contact-info-block">
+              <div class="contact-info-icon">📍</div>
+              <div>
+                <div class="contact-info-title">Based In</div>
+                <div class="contact-info-value">Sugar Land, Texas (Fort Bend County)</div>
+              </div>
+            </div>
+
+            <div class="contact-info-block">
+              <div class="contact-info-icon">🕐</div>
+              <div>
+                <div class="contact-info-title">Hours</div>
+                <div class="contact-info-value">24 Hours · 7 Days · 365 Days</div>
+              </div>
+            </div>
+
+            <div class="contact-info-block">
+              <div class="contact-info-icon">🔐</div>
+              <div>
+                <div class="contact-info-title">Physician Portal</div>
+                <div class="contact-info-value"><a href="https://pcdportal.com" target="_blank" style="color:var(--teal);">pcdportal.com ↗</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card reveal-right">
+          <div class="form-title">📋 Request a Study</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" class="form-control" placeholder="Jane" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" class="form-control" placeholder="Smith" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" class="form-control" placeholder="(713) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="you@clinic.com" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Facility Name</label>
+            <input type="text" class="form-control" placeholder="Houston Medical Center" />
+          </div>
+
+          <div class="form-group">
+            <label>Study Type Needed</label>
+            <select class="form-control">
+              <option value="" disabled selected>Select a service...</option>
+              <option>Cardiac Ultrasound (Echo / Doppler)</option>
+              <option>Stress Echocardiogram</option>
+              <option>Vascular Ultrasound (DVT / PAD)</option>
+              <option>Carotid Ultrasound</option>
+              <option>General Ultrasound</option>
+              <option>ABI — Ankle Brachial Index</option>
+              <option>Holter Monitor</option>
+              <option>Multiple / Not Sure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Additional Notes</label>
+            <textarea class="form-control" placeholder="Patient location, urgency, special instructions..."></textarea>
+          </div>
+
+          <button class="form-submit" onclick="handleSubmit(event)">
+            📤 Submit Request
+          </button>
+          <div class="form-disclaimer">We typically respond within minutes. For urgent studies, call 713-715-7056.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <div>
+          <div class="footer-brand-name">Precision Cardiovascular Diagnostics</div>
+          <div class="footer-brand-tag">Mobile Ultrasound · Sugar Land, Texas</div>
+          <div class="footer-brand-desc">Board-certified sonographers and specialists bringing precision ultrasound diagnostics directly to hospitals, clinics, nursing homes, and patients across Texas — 24/7.</div>
+          <div class="footer-phone">713-715-7056</div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About PCD</a>
+            <a href="#services">Services</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#how-it-works">How It Works</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Services</div>
+          <div class="footer-links">
+            <a href="#services">Cardiac Ultrasound</a>
+            <a href="#services">Vascular Ultrasound</a>
+            <a href="#services">Carotid Ultrasound</a>
+            <a href="#services">General Ultrasound</a>
+            <a href="#services">ABI Testing</a>
+            <a href="#services">Holter Monitor</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Resources</div>
+          <div class="footer-links">
+            <a href="#service-areas">Service Areas</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+            <a href="https://pcdportal.com" target="_blank">Employee Portal ↗</a>
+            <a href="https://pcdportal.com" target="_blank">Physician Portal ↗</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 Precision Cardiovascular Diagnostics. All rights reserved. Sugar Land, Texas.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">HIPAA Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    // ── Navbar scroll effect ──────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // ── Mobile menu toggle ────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    }
+
+    // ── Intersection Observer for scroll reveals ──────────────────
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ── FAQ accordion ─────────────────────────────────────────────
+    function toggleFaq(questionEl) {
+      const item = questionEl.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach(openItem => {
+        openItem.classList.remove('open');
+      });
+
+      // Open clicked if it was closed
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    }
+
+    // ── Contact form mock submit ──────────────────────────────────
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target;
+      btn.textContent = '✅ Request Received!';
+      btn.style.background = '#22c55e';
+      btn.style.pointerEvents = 'none';
+      setTimeout(() => {
+        btn.innerHTML = '📤 Submit Request';
+        btn.style.background = '';
+        btn.style.pointerEvents = '';
+      }, 3500);
+    }
+
+    // ── Active nav link highlighting ──────────────────────────────
+    const sections = document.querySelectorAll('section[id]');
+    const navLinkEls = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinkEls.forEach(link => {
+            link.style.color = '';
+            link.style.background = '';
+          });
+          const activeLink = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+          if (activeLink) {
+            activeLink.style.color = 'var(--white)';
+            activeLink.style.background = 'rgba(255,255,255,0.1)';
+          }
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(section => sectionObserver.observe(section));
+  </script>
+
+</body>
+</html>
